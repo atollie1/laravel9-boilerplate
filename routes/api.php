@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('auth')->group(function () {
-    Route::get('/user', [\App\Http\Controllers\Auth\AuthController::class, 'authUser']);
-    Route::post('/login', [\App\Http\Controllers\Auth\AuthController::class, 'login'])->name('login');
-    Route::post('/logout', [\App\Http\Controllers\Auth\AuthController::class, 'logout'])->name('logout');
+Route::prefix('auth')->controller(\App\Http\Controllers\Auth\AuthController::class)->group(function () {
+    Route::get('/user', 'authUser');
+    Route::post('/login', 'login')->name('login');
+    Route::post('/logout', 'logout')->name('logout');
 });
