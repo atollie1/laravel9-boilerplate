@@ -22,6 +22,7 @@ class AuthController extends Controller
     /**
      * @OA\Post(
      *     path="/api/auth/login",
+     *     operationId="v1Login",
      *     tags={"auth"},
      *     @OA\Parameter(
      *          name="body",
@@ -90,6 +91,7 @@ class AuthController extends Controller
     /**
      * @OA\Post(
      *     path="/api/auth/logout",
+     *     operationId="v1Logout",
      *     tags={"auth"},
      *     @OA\Response(
      *          response=204,
@@ -110,6 +112,7 @@ class AuthController extends Controller
     /**
      * @OA\Get(
      *     path="/api/auth/user",
+     *     operationId="v1GetAuthUser",
      *     tags={"auth"},
      *     @OA\Response(
      *          response=200,
