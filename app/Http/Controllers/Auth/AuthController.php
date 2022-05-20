@@ -24,9 +24,7 @@ class AuthController extends Controller
      *     path="/api/auth/login",
      *     operationId="v1Login",
      *     tags={"auth"},
-     *     @OA\Parameter(
-     *          name="body",
-     *          in="path",
+     *     @OA\RequestBody(
      *          @OA\JsonContent(
      *              type="object",
      *              @OA\Property(property="email", type="string", format="email", example="john.snow@stark.com"),
