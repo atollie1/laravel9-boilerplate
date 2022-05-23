@@ -11,6 +11,8 @@
         "laravel/framework": "^9.11",
         "laravel/sanctum": "^2.15",
         "laravel/tinker": "^2.7",
+        "spatie/cpu-load-health-check": "^1.0",
+        "spatie/laravel-health": "^1.9",
         "zircote/swagger-php": "^4.4"
     },
     "require-dev": {
