@@ -64,7 +64,7 @@ class AuthTest extends TestCase
         $response->assertStatus(400);
         $response->assertJson([
             'error' => [
-                'code' => '',
+                'code' => 401,
                 'message' => 'The provided credentials are incorrect.',
             ]
         ]);
