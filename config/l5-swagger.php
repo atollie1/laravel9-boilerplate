@@ -5,7 +5,7 @@ return [
     'documentations' => [
         'default' => [
             'api' => [
-                'title' => 'L5 Swagger UI',
+                'title' => 'Homage API Swagger UI',
             ],
 
             'routes' => [
@@ -129,7 +129,7 @@ return [
 
             /**
              * pattern: string       $pattern File pattern(s) to scan (default: *.php) .
-             *
+             *app
              * @see \OpenApi\scan
              */
             'pattern' => null,
