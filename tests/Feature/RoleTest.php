@@ -15,7 +15,10 @@ class RoleTest extends TestCase
 
     public function test_get_role_list()
     {
-        $roles = Role::factory()->count(5)->create();
+        $roles = Role::factory()
+            ->count(5)
+            ->sequence(fn ($sequence) => ['code' => "code-{$sequence->index}"])
+            ->create();
         $response = $this->get('/api/roles');
 
         $response->assertOk();

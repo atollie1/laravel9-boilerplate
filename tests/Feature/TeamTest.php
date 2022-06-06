@@ -16,7 +16,10 @@ class TeamTest extends TestCase
 
     public function test_get_team_list()
     {
-        $teams = Team::factory()->count(5)->create();
+        $teams = Team::factory()
+            ->count(5)
+            ->sequence(fn ($sequence) => ['code' => "code-{$sequence->index}"])
+            ->create();
         $response = $this->get('/api/teams');
 
         $response->assertOk();
