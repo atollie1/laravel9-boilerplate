@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use OpenApi\Annotations as OA;
 
 /**
- * @OA\Tag(name="auth")
+ * @OA\Tag(name="Auth")
  */
 class AuthController extends Controller
 {
@@ -23,7 +23,7 @@ class AuthController extends Controller
      * @OA\Post(
      *     path="/api/auth/login",
      *     operationId="v1Login",
-     *     tags={"auth"},
+     *     tags={"Auth"},
      *     @OA\RequestBody(
      *          @OA\JsonContent(
      *              type="object",
@@ -90,7 +90,7 @@ class AuthController extends Controller
      * @OA\Post(
      *     path="/api/auth/logout",
      *     operationId="v1Logout",
-     *     tags={"auth"},
+     *     tags={"Auth"},
      *     @OA\Response(
      *          response=204,
      *          description="Logout success"
@@ -111,7 +111,7 @@ class AuthController extends Controller
      * @OA\Get(
      *     path="/api/auth/user",
      *     operationId="v1GetAuthUser",
-     *     tags={"auth"},
+     *     tags={"Auth"},
      *     @OA\Response(
      *          response=200,
      *          description="Authenticated user",
