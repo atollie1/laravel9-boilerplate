@@ -35,13 +35,13 @@ class RoleController extends Controller
      *     @OA\Parameter(
      *          in="query",
      *          name="sort_by",
-     *          description="availabel options: id, name, code, created_at, updated_at",
+     *          description="available options: id, name, code, created_at, updated_at",
      *          example="created_at"
      *     ),
      *     @OA\Parameter(
      *          in="query",
      *          name="sort_dir",
-     *          description="availabel options: asc, desc",
+     *          description="available options: asc, desc",
      *          example="desc"
      *     ),
      *     @OA\Response(
@@ -250,7 +250,7 @@ class RoleController extends Controller
      *     ),
      *     @OA\Response(
      *          response=404,
-     *          description="Failed to update role",
+     *          description="Role not found",
      *          @OA\JsonContent(
      *              type="object",
      *              @OA\Property(
@@ -326,8 +326,16 @@ class RoleController extends Controller
      *          )
      *     ),
      *     @OA\Response(
+     *          response=422,
+     *          description="Role data validation fail",
+     *          @OA\JsonContent(
+     *              type="object",
+     *              @OA\Property(property="name.required", type="number", example="The name field is required.")
+     *          )
+     *     ),
+     *     @OA\Response(
      *          response=500,
-     *          description="Role not found",
+     *          description="Failed to update Role",
      *          @OA\JsonContent(
      *              type="object",
      *              @OA\Property(
